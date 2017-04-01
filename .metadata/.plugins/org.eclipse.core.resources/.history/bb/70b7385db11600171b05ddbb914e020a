@@ -1,0 +1,21 @@
+import java.io.File;
+import java.util.*;
+import WavFile.*; 
+
+public class Horse {
+
+	public static void main(String[] args) {
+		try {
+
+			// Open the wav file specified as the first argument
+			File file = new File ("");
+	       WavFile wavFile = WavFile.openWavFile( file );
+
+			System.out.println("Hello");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

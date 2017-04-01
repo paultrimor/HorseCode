@@ -1,0 +1,28 @@
+package Horse; 
+
+import java.io.File;
+import java.util.*;
+
+public class Horse {
+
+	public static void main(String[] args) {
+		try {
+
+			// Open the wav file specified as the first argument
+			File file = new File ("7n1-3.wav");
+	       WavFile wavFile = WavFile.openWavFile(file);
+	         // Display information about the wav file
+	         wavFile.display();
+	         
+	         // Get the number of audio channels in the wav file
+	         int numChannels = wavFile.getNumChannels();
+	         
+	         
+			System.out.println("Hello");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

@@ -1,0 +1,19 @@
+import java.util.*;
+import WavFile.*; 
+
+public class Horse {
+
+	public static void main(String[] args) {
+		try {
+
+			 Open the wav file specified as the first argument
+	       //  WavFile wavFile = WavFile.openWavFile(new File("C:\\Users\\Picheal\\Desktop\\HorseCode\\Testing\\Test audio files\\7n7-9.wav"));
+
+			System.out.println("Hello");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

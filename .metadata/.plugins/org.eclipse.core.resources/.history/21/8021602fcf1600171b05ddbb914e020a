@@ -1,0 +1,72 @@
+package Horse; 
+import java.io.File;
+import java.util.*;
+
+public class Horse {
+	
+		
+	
+	public void horseRead() {	
+		
+		
+	}
+	
+	public void horseWrite() {
+		
+	}
+	
+	public static void horseListen(String path, int sec) {		
+		int[] voice; 
+		try{
+			//Call the Horse to Read
+			File file = new File(path);
+			WavFile wavFile = WavFile.openWavFile(file);
+			
+			
+			int numChannels; 
+			int numFrames; 
+			int sampleRate;
+			int bufferSize; 
+			int[] buffer; 
+			
+			
+			wavFile.display();
+			numFrames = (int) wavFile.getNumFrames(); 
+			numChannels = wavFile.getNumChannels();
+			sampleRate = (int) wavFile.getNumFrames(); 
+			bufferSize = 353259 * 2;
+			
+			buffer = new int[bufferSize];	// Create a buffer of bufferSizr Frames
+	
+			int framesRead;
+			int min;
+			int max;
+	
+			do
+			{
+				framesRead = wavFile.readFrames(buffer, bufferSize);
+	
+				for (int s=0 ; s<bufferSize; s++)
+				{
+					System.out.println( buffer[s]);
+				}
+			}
+			while (framesRead != 0);			
+			/** Display Information **/ 
+			System.out.println("\nnumFrames: " + numFrames + "\n"
+						+ "bufferSize: " + bufferSize + "\n"
+						+ "sampleRate: " + sampleRate); 
+			
+			
+			// Close the wavFile
+				wavFile.close();
+		} catch (Exception e) { System.out.println(e);}
+		
+		
+	}	
+	
+		
+	public void horseSpeak() {
+		
+	}
+}

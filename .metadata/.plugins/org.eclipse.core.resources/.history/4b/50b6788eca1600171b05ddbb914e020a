@@ -1,0 +1,7 @@
+package Horse;
+
+public class Client {
+	public static void main(String[] args){
+		Horse.horseSpeak("7n7-9.wav", 2); 
+	}
+}

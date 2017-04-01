@@ -1,0 +1,7 @@
+package Horse;
+
+public class Client {
+	public static void main(String[] args){
+		Horse.horseListen("7npMedium.wav", 2); 
+	}
+}
